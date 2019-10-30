@@ -97,6 +97,7 @@ private:
   bool monitorDaemon_;
   std::ofstream logFile_;
   edm::InputTag rpcdigiSource_;
+  edm::InputTag cppfdigiSource_;
   edm::EDGetTokenT<RPCDigiCollection> rpcdigiSource_token_;
   edm::EDGetTokenT<l1t::CPPFDigiCollection> cppfdigiSource_token_;
   edm::InputTag rpctfSource_;

@@ -6,8 +6,9 @@ using namespace edm;
 
 L1TStage2CPPF::L1TStage2CPPF(const ParameterSet& ps)
     : rpcdigiSource_(ps.getParameter<InputTag>("rpcdigiSource")),
+      cppfdigiSource_(ps.getParameter<InputTag>("cppfdigiSource")),
       rpcdigiSource_token_(consumes<RPCDigiCollection>(ps.getParameter<InputTag>("rpcdigiSource"))),
-      cppfdigiSource_token_(consumes<l1t::CPPFDigiCollection>(ps.getParameter<InputTag>("rpcdigiSource"))) {
+      cppfdigiSource_token_(consumes<l1t::CPPFDigiCollection>(ps.getParameter<InputTag>("cppfdigiSource"))) {
   // verbosity switch
   verbose_ = ps.getUntrackedParameter<bool>("verbose", false);
 
